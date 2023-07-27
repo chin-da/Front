@@ -1,50 +1,12 @@
-import { styled } from '@stitches/react';
+import { ButtonHTMLAttributes } from 'react';
+import { StyledButton, ButtonVariantsType } from './style';
 
-export const Button = styled('button', {
-  boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & ButtonVariantsType;
 
-  borderRadius: 5,
-  outline: 'none',
+const Button = (props: ButtonProps) => {
+  const { children, ...rest } = props;
 
-  cursor: 'pointer',
+  return <StyledButton {...rest}>{children}</StyledButton>;
+};
 
-  variants: {
-    color: {
-      primary: {
-        backgroundColor: '#bcabfc',
-        color: '#222',
-
-        border: 'none',
-
-        ['&:hover']: {
-          background: '#a792fc',
-        },
-      },
-      secondary: {
-        backgroundColor: '#fff',
-        color: '#a792fc',
-
-        border: '1px solid #a792fc',
-
-        ['&:hover']: {
-          background: '#e4defc',
-        },
-      },
-    },
-    size: {
-      sm: {
-        fontSize: 14,
-        padding: '5px 8px',
-      },
-      lg: {
-        fontSize: 16,
-        padding: '10px 20px',
-      },
-    },
-  },
-
-  defaultVariants: {
-    color: 'primary',
-    size: 'lg',
-  },
-});
+export default Button;
