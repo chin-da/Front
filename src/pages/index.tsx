@@ -1,13 +1,5 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import { Inter, Noto_Sans_KR } from 'next/font/google';
-import styles from '@/styles/Home.module.css';
-import { Button } from '@/components/common/Button';
-
-const noto = Noto_Sans_KR({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-});
+import Button from '@/components/common/Button';
 
 export default function Home() {
   return (
@@ -18,23 +10,19 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className={`${styles.main} ${noto.className}`}>
-        <section className={styles.section}>
+      <main>
+        <section>
           <h1>Large Size</h1>
           <div>
-            <Button className={noto.className}>Primay Button</Button>
-            <Button className={noto.className} color='secondary'>
-              Secondary Button
-            </Button>
+            <Button>Primay Button</Button>
+            <Button color='secondary'>Secondary Button</Button>
           </div>
         </section>
-        <section className={styles.section}>
+        <section>
           <h1>Small Size</h1>
           <div>
-            <Button className={noto.className} size='sm'>
-              Primay Button
-            </Button>
-            <Button className={noto.className} color='secondary' size='sm'>
+            <Button size='small'>Primay Button</Button>
+            <Button color='secondary' size='small'>
               Secondary Button
             </Button>
           </div>
