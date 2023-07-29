@@ -1,30 +1,32 @@
 import { styled, VariantProps } from '@stitches/react';
 
 export const ButtonStyled = styled('button', {
-  boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
+  fontSize: 16,
+  padding: '10px 20px',
 
+  color: '#222',
+  backgroundColor: '#bcabfc',
+
+  border: 'none',
   borderRadius: 5,
   outline: 'none',
 
+  boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
+
   cursor: 'pointer',
+
+  '&:hover': {
+    background: '#a792fc',
+  },
 
   variants: {
     color: {
-      primary: {
-        backgroundColor: '#bcabfc',
-        color: '#222',
-
-        border: 'none',
-
-        '&:hover': {
-          background: '#a792fc',
-        },
-      },
+      primary: {},
       secondary: {
         backgroundColor: '#fff',
         color: '#a792fc',
 
-        border: '1px solid #a792fc',
+        borderColor: '#a792fc',
 
         '&:hover': {
           background: '#e4defc',
@@ -32,13 +34,10 @@ export const ButtonStyled = styled('button', {
       },
     },
     size: {
+      large: {},
       small: {
         fontSize: 14,
         padding: '5px 8px',
-      },
-      large: {
-        fontSize: 16,
-        padding: '10px 20px',
       },
     },
   },
