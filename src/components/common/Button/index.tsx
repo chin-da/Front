@@ -1,8 +1,5 @@
-import { ButtonHTMLAttributes } from 'react';
 import * as S from './style';
-
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
-  S.ButtonVariantsType;
+import { ButtonProps } from './type';
 
 const Button = (props: ButtonProps) => {
   const { children, ...rest } = props;

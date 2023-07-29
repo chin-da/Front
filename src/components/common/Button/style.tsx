@@ -48,5 +48,3 @@ export const ButtonStyled = styled('button', {
     size: 'large',
   },
 });
-
-export type ButtonVariantsType = VariantProps<typeof ButtonStyled>;
