@@ -1,6 +1,6 @@
 import { styled, VariantProps } from '@stitches/react';
 
-export const StyledButton = styled('button', {
+export const ButtonStyled = styled('button', {
   boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
 
   borderRadius: 5,
@@ -49,4 +49,4 @@ export const StyledButton = styled('button', {
   },
 });
 
-export type ButtonVariantsType = VariantProps<typeof StyledButton>;
+export type ButtonVariantsType = VariantProps<typeof ButtonStyled>;
