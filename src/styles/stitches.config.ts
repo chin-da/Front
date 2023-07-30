@@ -6,7 +6,7 @@ const notoSansKr = Noto_Sans_KR({
   weight: ['400', '500', '700'],
 });
 
-export const { globalCss, getCssText } = createStitches({
+export const { styled, globalCss, getCssText } = createStitches({
   theme: {
     fonts: {
       notoSansKr: `${notoSansKr.style.fontFamily}`,

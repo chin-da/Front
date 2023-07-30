@@ -1,6 +1,6 @@
-import { styled, VariantProps } from '@stitches/react';
+import { styled } from '@/styles/stitches.config';
 
-export const ButtonStyled = styled('button', {
+export const Button = styled('button', {
   fontSize: 16,
   padding: '10px 20px',
 
@@ -40,10 +40,5 @@ export const ButtonStyled = styled('button', {
         padding: '5px 8px',
       },
     },
-  },
-
-  defaultVariants: {
-    color: 'primary',
-    size: 'large',
   },
 });

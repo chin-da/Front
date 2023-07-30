@@ -1,4 +1,4 @@
 import { ComponentProps } from 'react';
-import { ButtonStyled } from './style';
+import { Button } from './style';
 
-export type ButtonProps = ComponentProps<typeof ButtonStyled>;
+export type ButtonProps = ComponentProps<typeof Button>;
