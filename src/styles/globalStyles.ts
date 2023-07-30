@@ -1,17 +1,11 @@
-import { globalCss } from '@stitches/react';
-import { Noto_Sans_KR } from 'next/font/google';
-
-const notoSansKr = Noto_Sans_KR({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-});
+import { globalCss } from '@/styles/stitches.config';
 
 export const globalStyles = globalCss({
   '*': {
     boxSizing: 'border-box',
     padding: 0,
     margin: 0,
-    fontFamily: `${notoSansKr.style.fontFamily}`,
+    fontFamily: '$notoSansKr',
   },
 
   'html, body': {
