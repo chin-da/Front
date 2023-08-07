@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Preview } from '@storybook/react';
 import { globalStyles } from '../src/styles/globalStyles';
+import { OverlayProvider } from '../src/hooks/useOverlay';
 
 const preview: Preview = {
   parameters: {
@@ -15,7 +16,11 @@ const preview: Preview = {
   decorators: [
     Story => {
       globalStyles();
-      return Story();
+      return (
+        <OverlayProvider>
+          <Story />
+        </OverlayProvider>
+      );
     },
   ],
 };

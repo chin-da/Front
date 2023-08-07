@@ -1,18 +1,31 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import Button from '.';
+import { ButtonProps } from './type';
 
-const meta: Meta<typeof Button> = {
+import { Button } from '.';
+
+export default {
+  title: 'commons/Button',
   component: Button,
 };
-
-export default meta;
-type Story = StoryObj<typeof Button>;
-
-export const Primary: Story = {
-  args: {
-    children: 'Button',
-    size: 'large',
-    color: 'primary',
-  },
+export const Default = (args: ButtonProps) => {
+  return (
+    <>
+      <Button {...args}>버튼</Button>
+      <br />
+      <Button icon={<FontAwesomeIcon icon={faSearch} />} {...args}>
+        아이콘버튼
+      </Button>
+      <br />
+      <Button loading {...args}>
+        로딩 버튼
+      </Button>
+      <br />
+    </>
+  );
+};
+Default.args = {
+  size: 'sm',
+  variant: 'primary',
 };
