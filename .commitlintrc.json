@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "@commitlint/config-conventional"
+  ],
+  "rules": {
+    "type-enum": [
+      2,
+      "always",
+      [
+        "REFACTOR",
+        "CHORE",
+        "DOCS",
+        "FEAT",
+        "FIX",
+        "DEL",
+        "MOVE",
+        "RENAME",
+        "MERGE",
+        "STYLE",
+        "INIT",
+        "ADD"
+      ]
+    ],
+    "type-case": [2, "always", "upper-case"]
+  }
+}
