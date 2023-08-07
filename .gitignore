@@ -1,5 +1,7 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Created by https://www.toptal.com/developers/gitignore/api/nextjs,storybookjs,vercel,react
+# Edit at https://www.toptal.com/developers/gitignore?templates=nextjs,storybookjs,vercel,react
 
+### NextJS ###
 # dependencies
 /node_modules
 /.pnp
@@ -23,6 +25,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
 # local env files
 .env*.local
@@ -33,3 +36,29 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+### react ###
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+node_modules
+bower_components
+
+*.sublime*
+
+psd
+thumb
+sketch
+
+### StorybookJs ###
+# gitignore template for the Storybook, UI guide for front apps
+# website: https://storybook.js.org/
+
+storybook-static/
+
+### Vercel ###
+
+# End of https://www.toptal.com/developers/gitignore/api/nextjs,storybookjs,vercel,react
