@@ -1,5 +1,6 @@
 import * as Toast from '@radix-ui/react-toast';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { keyframes, styled } from '@/styles/stitches.config';
 
 const VIEWPORT_PADDING = 25;

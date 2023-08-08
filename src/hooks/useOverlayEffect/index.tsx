@@ -1,5 +1,5 @@
 import { useOverlay as tossUseOverlay } from '@toss/use-overlay';
-import { useRef, useState, useMemo } from 'react';
+import { useRef, useMemo } from 'react';
 import { isEmpty } from 'lodash';
 
 import { OverlayEffectWrapper, StyledOverlay } from './style';
@@ -48,7 +48,9 @@ export function useOverlayEffect({
                   {isMount && (
                     <StyledOverlay
                       style={{
-                        animation: `${isOpen ? overlayShow : overlayHide} ${duration} ${timing}`,
+                        animation: `${
+                          isOpen ? overlayShow : overlayHide
+                        } ${duration} ${timing}`,
                         ...style,
                         height: `${getHeight()}`,
                       }}
@@ -58,7 +60,8 @@ export function useOverlayEffect({
                       onAnimationEnd={() => {
                         if (!isOpen) {
                           exit();
-                          if (isTargetHide) openerTarget.style.visibility = 'visible';
+                          if (isTargetHide)
+                            openerTarget.style.visibility = 'visible';
                         }
                       }}
                     >
@@ -73,7 +76,17 @@ export function useOverlayEffect({
           console.warn(err);
         }
       },
-    [isFullScreen, isTargetHide, isBodyLocked, style, openMotion, closeMotion, duration, delay, timing],
+    [
+      isFullScreen,
+      isTargetHide,
+      isBodyLocked,
+      style,
+      openMotion,
+      closeMotion,
+      duration,
+      delay,
+      timing,
+    ],
   );
 
   const memoizedOpen = useMemo(() => open, [open]);

@@ -14,11 +14,12 @@ export default storyMeta;
 export const Default = (args: ToastProps) => {
   const toast = useToast();
   return (
-    <div style={{ height: '500vh' }}>
+    <div style={{ height: '500vh' }} {...args}>
       <Button
         onClick={() =>
           toast.success({
-            title: '제목엄청긴 제목일때 어떻게 나올지 모르겠다다다다다다다다다다다다다',
+            title:
+              '제목엄청긴 제목일때 어떻게 나올지 모르겠다다다다다다다다다다다다다',
             content:
               '제목엄청긴 제목일때 어떻게 나올지 모르겠다다다다다다다다다다다다다제목엄청긴 제목일때 어떻게 나올지 모르겠다다다다다다다다다다다다다제목엄청긴 제목일때 어떻게 나올지 모르겠다다다다다다다다다다다다다',
             duration: 100000,
@@ -28,9 +29,13 @@ export const Default = (args: ToastProps) => {
         성공 호출
       </Button>
       <br />
-      <Button onClick={() => toast.warn({ title: '제목', content: '내용' })}>주의 호출</Button>
+      <Button onClick={() => toast.warn({ title: '제목', content: '내용' })}>
+        주의 호출
+      </Button>
       <br />
-      <Button onClick={() => toast.error({ title: '제목', content: '내용' })}>오류 호출</Button>
+      <Button onClick={() => toast.error({ title: '제목', content: '내용' })}>
+        오류 호출
+      </Button>
     </div>
   );
 };

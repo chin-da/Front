@@ -1,4 +1,5 @@
 import { max } from 'lodash';
+
 import { keyframes } from '@/styles/stitches.config';
 
 import { getEffectProps } from './type';

@@ -1,6 +1,9 @@
 import { useCallback, useEffect, useRef } from 'react';
 
-export function usePreservedCallback<Callback extends (...args: any[]) => any>(callback: Callback) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function usePreservedCallback<Callback extends (...args: any[]) => any>(
+  callback: Callback,
+) {
   const callbackRef = useRef<Callback>(callback);
 
   useEffect(() => {
@@ -8,6 +11,7 @@ export function usePreservedCallback<Callback extends (...args: any[]) => any>(c
   }, [callback]);
 
   return useCallback(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (...args: any[]) => {
       return callbackRef.current(...args);
     },

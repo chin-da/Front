@@ -7,8 +7,9 @@ import {
   useMemo,
 } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import { useSlideDirection } from '@/hooks';
 import { useLocation } from 'react-use';
+
+import { useSlideDirection } from '@/hooks';
 
 import { ChildrenStyled, TIMEOUT, TransitionGroupStyled } from './style';
 import { AppLayoutContextProps } from './type';

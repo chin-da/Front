@@ -17,8 +17,9 @@ export const getOpenDirection = (direction: string) => {
   }
 };
 
-export const getMotion: any = ({ target, wrapper }: MotionProps) => {
-  const { top, left, height, width } = target.currentTarget.getBoundingClientRect();
+export const getMotion = ({ target, wrapper }: MotionProps) => {
+  const { top, left, height, width } =
+    target.currentTarget.getBoundingClientRect();
   const bgColor = getComputedStyle(target.currentTarget).backgroundColor;
   const targetPosition = {
     //target이 되는 대상 객체의 크기, 위치에서 animation을 시작하거나 끝낼때 사용

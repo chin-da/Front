@@ -7,11 +7,25 @@ import { ButtonProps } from './type';
 export const Button = memo(
   forwardRef<HTMLButtonElement, ButtonProps>(
     (
-      { icon, iconPosition = 'left', loading = false, size = 'sm', variant = 'primary', children, ...restProps },
+      {
+        icon,
+        iconPosition = 'left',
+        loading = false,
+        size = 'sm',
+        variant = 'primary',
+        children,
+        ...restProps
+      },
       ref,
     ) => {
       return (
-        <ButtonWrapper size={size} variant={variant} loading={loading} {...restProps} ref={ref}>
+        <ButtonWrapper
+          size={size}
+          variant={variant}
+          loading={loading}
+          {...restProps}
+          ref={ref}
+        >
           {typeof icon !== 'undefined' && iconPosition === 'left' && (
             <StyledIcon variant={variant} size={size}>
               {icon}

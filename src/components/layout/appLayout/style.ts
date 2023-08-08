@@ -1,4 +1,5 @@
 import { TransitionGroup } from 'react-transition-group';
+
 import { styled } from '@/styles/stitches.config';
 export const TIMEOUT = 200;
 const commonAbsolute = { position: 'absolute', width: '100%' };

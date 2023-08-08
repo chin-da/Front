@@ -1,5 +1,6 @@
-import Accordion from '.';
 import { AccordionProps } from './type';
+
+import Accordion from '.';
 
 export default {
   title: 'commons/Accordion',
@@ -8,7 +9,7 @@ export default {
 
 export const Default = (args: AccordionProps) => (
   <>
-    <Accordion.Item expanded={true}>
+    <Accordion.Item expanded={args.expanded}>
       <Accordion.Header>아코디언 단일</Accordion.Header>
       <Accordion.Body>단일</Accordion.Body>
     </Accordion.Item>

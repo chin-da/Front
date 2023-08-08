@@ -1,4 +1,3 @@
-import { MetricProps } from './type';
 import { Title } from '../Title';
 import { Subtitle } from '../Subtitle';
 import { Text } from '../Text';
@@ -9,7 +8,7 @@ export default {
   title: 'commons/Text/Metric',
   component: Metric,
 };
-export const Default = (args: MetricProps) => (
+export const Default = () => (
   <>
     <Metric>안녕 메트릭 , 메트릭.</Metric>
     <br />

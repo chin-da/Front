@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import { Switch } from '.';
 
@@ -12,7 +12,7 @@ export const Default = () => {
   const [value, setValue] = useState<boolean>(true);
   return (
     <>
-      <Switch value={value} onValueChange={(e) => setValue(e)} />
+      <Switch value={value} onValueChange={e => setValue(e)} />
       <br />
       value is : {value.toString()}
     </>

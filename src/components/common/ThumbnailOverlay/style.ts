@@ -14,7 +14,10 @@ export const ThumbnailOverlayWrapper = styled('div', {
   position: 'relative',
 });
 
-export const StyledCard = styled(Card, { background: '#efefef', textAlign: 'center' });
+export const StyledCard = styled(Card, {
+  background: '#efefef',
+  textAlign: 'center',
+});
 
 export const StyledClose = styled('div', {});
 
@@ -30,8 +33,4 @@ export const StyledBox = styled('div', {
 export const StyledThumbnail = styled('img', {
   width: '100%',
   display: 'block',
-  // objectFit: 'cover',
-  // objectPosition: 'center',
-  // aspectRatio: '16/9',
-  // height: 'auto',
 });

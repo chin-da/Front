@@ -1,11 +1,13 @@
-import { styled, keyframes } from '@/styles/stitches.config';
-const fadeShow = keyframes({
-  '0%': { opacity: 0 },
-  '100%': { opacity: 1 },
-});
+import {
+  styled,
+  // keyframes
+} from '@/styles/stitches.config';
+// const fadeShow = keyframes({
+//   '0%': { opacity: 0 },
+//   '100%': { opacity: 1 },
+// });
 export const OverlayEffectWrapper = styled('div', {});
 export const StyledOverlay = styled('div', {
-  // perspective: '0px',
   zIndex: 1,
   width: '100%',
   display: 'flex',

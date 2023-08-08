@@ -1,8 +1,11 @@
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
+
 import { useOverlayEffect } from '@/hooks';
-import ThumbnailOverlay from '.';
+
 import { Button } from '../Button';
 import { StyledCard } from './style';
+
+import ThumbnailOverlay from '.';
 
 export default {
   title: 'commons/Overlay/ThumbnailOverlay',
@@ -11,7 +14,8 @@ export default {
 
 const dataList = [
   {
-    thumbnail: 'https://fastly.picsum.photos/id/931/1024/1024.jpg?hmac=n-hKmK163X4iiAXGgP-jwr-SC0FY_xNqadYbd-0rb9g',
+    thumbnail:
+      'https://fastly.picsum.photos/id/931/1024/1024.jpg?hmac=n-hKmK163X4iiAXGgP-jwr-SC0FY_xNqadYbd-0rb9g',
     title: '그리드',
   },
   {
@@ -23,6 +27,7 @@ const dataList = [
 export const Default = () => {
   const tRef = useRef(null);
   const tRef2 = useRef(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const tRefs = useRef<any>([]); // list 데이터로 생성시
   const full = useOverlayEffect({
     openMotion: 'stretch_diagonal',
@@ -35,7 +40,7 @@ export const Default = () => {
     <>
       <StyledCard
         style={{ width: '240px', display: 'inline-block', overflow: 'hidden' }}
-        onClick={(e) => {
+        onClick={e => {
           full.open({
             render: (
               <ThumbnailOverlay overlay={full}>
@@ -49,7 +54,9 @@ export const Default = () => {
                       style={{ gridArea: '1/1' }}
                     />
                     <div style={{ gridArea: '1/2' }}>
-                      <ThumbnailOverlay.Box>이 사진은 산이다.</ThumbnailOverlay.Box>
+                      <ThumbnailOverlay.Box>
+                        이 사진은 산이다.
+                      </ThumbnailOverlay.Box>
                     </div>
                   </div>
                   <ThumbnailOverlay.Close>
@@ -59,8 +66,12 @@ export const Default = () => {
                   </ThumbnailOverlay.Close>
                   <ThumbnailOverlay.Box>
                     <div style={{ height: '300px', border: '1px solid red' }}>
-                      <span style={{ whiteSpace: 'nowrap' }}>이 사진은 산입니다.</span>
-                      <span style={{ whiteSpace: 'nowrap' }}>300px 스크롤 예제</span>
+                      <span style={{ whiteSpace: 'nowrap' }}>
+                        이 사진은 산입니다.
+                      </span>
+                      <span style={{ whiteSpace: 'nowrap' }}>
+                        300px 스크롤 예제
+                      </span>
                     </div>
                   </ThumbnailOverlay.Box>
                 </div>
@@ -81,7 +92,7 @@ export const Default = () => {
 
       <StyledCard
         style={{ width: '240px', display: 'inline-block', overflow: 'hidden' }}
-        onClick={(e) => {
+        onClick={e => {
           full.open({
             render: (
               <ThumbnailOverlay overlay={full}>
@@ -99,8 +110,12 @@ export const Default = () => {
                     <Button>닫기</Button>
                   </ThumbnailOverlay.Close>
                   <div style={{ height: '300px', border: '1px solid red' }}>
-                    <span style={{ whiteSpace: 'nowrap' }}>이 사진은 산입니다.</span>
-                    <span style={{ whiteSpace: 'nowrap' }}>300px 스크롤 예제</span>
+                    <span style={{ whiteSpace: 'nowrap' }}>
+                      이 사진은 산입니다.
+                    </span>
+                    <span style={{ whiteSpace: 'nowrap' }}>
+                      300px 스크롤 예제
+                    </span>
                   </div>
                 </div>
               </ThumbnailOverlay>
@@ -121,8 +136,13 @@ export const Default = () => {
       {dataList.map((o, idx) => {
         return (
           <StyledCard
-            style={{ width: '240px', display: 'inline-block', overflow: 'hidden' }}
-            onClick={(e) => {
+            key={idx}
+            style={{
+              width: '240px',
+              display: 'inline-block',
+              overflow: 'hidden',
+            }}
+            onClick={e => {
               full.open({
                 render: (
                   <ThumbnailOverlay overlay={full}>
@@ -140,8 +160,12 @@ export const Default = () => {
                         <Button>닫기</Button>
                       </ThumbnailOverlay.Close>
                       <div style={{ height: '300px', border: '1px solid red' }}>
-                        <span style={{ whiteSpace: 'nowrap' }}>이 사진은 산입니다.</span>
-                        <span style={{ whiteSpace: 'nowrap' }}>300px 스크롤 예제</span>
+                        <span style={{ whiteSpace: 'nowrap' }}>
+                          이 사진은 산입니다.
+                        </span>
+                        <span style={{ whiteSpace: 'nowrap' }}>
+                          300px 스크롤 예제
+                        </span>
                       </div>
                     </div>
                   </ThumbnailOverlay>
@@ -151,7 +175,7 @@ export const Default = () => {
             }}
           >
             <img
-              ref={(el) => (tRefs.current[idx] = el)}
+              ref={el => (tRefs.current[idx] = el)}
               src={o.thumbnail}
               style={{ width: '180px' }}
               alt="썸네일 대상"

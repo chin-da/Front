@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import Button from '@/components/common/Button';
+import Button from '@/components/common/NewButton';
 
 export default function Home() {
   return (

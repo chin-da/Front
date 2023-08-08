@@ -86,6 +86,7 @@ export const useTyping = ({ text, isRun, speed = 150 }: useTypingProps) => {
   const [isDone, setIsDone] = useState<boolean>(false);
   useEffect(() => {
     if (isRun) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const typing: string | any[] = [];
       const result = text.split('');
       for (let i = 0; i < result.length; i++) {
@@ -95,9 +96,7 @@ export const useTyping = ({ text, isRun, speed = 150 }: useTypingProps) => {
       let i = 0;
       let j = 0;
       const imax = typing.length;
-      const inter = setInterval(runTyping, speed);
-      setIsDone(false);
-      function runTyping() {
+      const runTyping = () => {
         if (i <= imax - 1) {
           const jmax = typing[i].length;
           setLiveText(texts + typing[i][j]);
@@ -111,7 +110,9 @@ export const useTyping = ({ text, isRun, speed = 150 }: useTypingProps) => {
           clearInterval(inter);
           setIsDone(true);
         }
-      }
+      };
+      const inter = setInterval(runTyping, speed);
+      setIsDone(false);
     }
   }, [isRun, speed, text]);
   return { liveText, isDone };

@@ -4,6 +4,7 @@ import { useEffect, useMemo } from 'react';
 import { usePreservedCallback } from '../usePreservedCallback';
 import { usePreservedReference } from '../usePreservedReference';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function useDebounce<F extends (...args: any[]) => any>(
   callback: F,
   wait: number,

@@ -2,7 +2,8 @@ import { ComponentPropsWithoutRef } from 'react';
 
 import { ToastStyled } from './style';
 
-export interface ToastProps extends ComponentPropsWithoutRef<typeof ToastStyled> {
+export interface ToastProps
+  extends ComponentPropsWithoutRef<typeof ToastStyled> {
   title?: string;
   content?: string;
   duration: number;

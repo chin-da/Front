@@ -1,6 +1,7 @@
-import { useInputState } from '@/hooks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faTag } from '@fortawesome/free-solid-svg-icons';
+
+import { useInputState } from '@/hooks';
 
 import { TextInputProps } from './type';
 
@@ -15,7 +16,13 @@ export const Default = (args: TextInputProps) => {
   return (
     <>
       <br />
-      <TextInput value={value} placeholder={'기본 폼'} onChange={setValue} {...args} style={{ width: '200px' }} />
+      <TextInput
+        value={value}
+        placeholder={'기본 폼'}
+        onChange={setValue}
+        {...args}
+        style={{ width: '200px' }}
+      />
       <br />
       <TextInput
         icon={<FontAwesomeIcon icon={faSearch} style={{ opacity: 0.5 }} />}
@@ -62,7 +69,12 @@ export const Default = (args: TextInputProps) => {
       />
       <br />
       <br />
-      <TextInput placeholder={'비활성 폼'} disabled={true} style={{ width: '400px' }} {...args} />
+      <TextInput
+        placeholder={'비활성 폼'}
+        disabled={true}
+        style={{ width: '400px' }}
+        {...args}
+      />
     </>
   );
 };

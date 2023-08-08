@@ -1,20 +1,27 @@
 import { ComponentPropsWithoutRef, ReactNode } from 'react';
 
+import { useOverlayEffect } from '@/hooks';
+
 import { StyledClose, StyledThumbnail, ThumbnailOverlayWrapper } from './style';
 
-export interface ThumbnailOverlayProps extends ComponentPropsWithoutRef<typeof ThumbnailOverlayWrapper> {
+export type Overlay = ReturnType<typeof useOverlayEffect>;
+
+export interface ThumbnailOverlayProps
+  extends ComponentPropsWithoutRef<typeof ThumbnailOverlayWrapper> {
   children?: ReactNode;
-  overlay: any;
+  overlay: Overlay;
 }
-export interface ThumbnailThumbnailProps extends ComponentPropsWithoutRef<typeof StyledThumbnail> {
+export interface ThumbnailThumbnailProps
+  extends ComponentPropsWithoutRef<typeof StyledThumbnail> {
   src: string;
-  currentTarget: any;
+  currentTarget: HTMLElement;
 }
-export interface ThumbnailCloseProps extends ComponentPropsWithoutRef<typeof StyledClose> {
+export interface ThumbnailCloseProps
+  extends ComponentPropsWithoutRef<typeof StyledClose> {
   children: ReactNode;
 }
 
 export interface ThumbnailOverlayContextProps {
-  overlayState: [any, React.Dispatch<React.SetStateAction<any>>];
+  overlayState: [Overlay, React.Dispatch<React.SetStateAction<Overlay>>];
   isOpenState: [boolean, React.Dispatch<React.SetStateAction<boolean>>];
 }

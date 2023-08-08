@@ -14,16 +14,21 @@ export function useSlideDirection() {
 
   useEffect(() => {
     const targetIdx = findIndex(historyList, ['key', pathKey]);
-    if (targetIdx > 0 && typeof historyList[targetIdx]?.layout === 'undefined') {
+    if (
+      targetIdx > 0 &&
+      typeof historyList[targetIdx]?.layout === 'undefined'
+    ) {
       historyList[targetIdx].layout = slideDirection;
     }
   }, [historyList.length]);
 
   useEffect(() => {
     if (direction === 'forward') {
-      setSlideDirection(historyList.find((e) => e.key === pathKey)?.layout);
+      setSlideDirection(
+        historyList.find(e => e.key === pathKey)?.layout || 'fade',
+      );
     } else if (direction === 'back') {
-      if (historyList.find((e) => e.key === beforePathKey)?.layout === 'left') {
+      if (historyList.find(e => e.key === beforePathKey)?.layout === 'left') {
         setSlideDirection('right');
       }
     } else {

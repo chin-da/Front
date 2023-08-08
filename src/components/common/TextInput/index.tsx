@@ -1,4 +1,8 @@
-import { faCircleCheck, faCircleExclamation, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCircleCheck,
+  faCircleExclamation,
+  faCircleXmark,
+} from '@fortawesome/free-solid-svg-icons';
 import { memo, forwardRef, useState, useEffect, ChangeEvent } from 'react';
 
 import { Text } from '../Text/Text';
@@ -23,14 +27,28 @@ function omitStyle(obj: TextInputProps) {
 
 export const TextInput = memo(
   forwardRef<HTMLInputElement, TextInputProps>(
-    ({ onChange, value = '', disabled = false, status, statusMessage = '', icon, label, ...restProps }, ref) => {
-      const [isDirty, setIsDirty] = useState<boolean>(false); //input이 한번이라도 변경되면 true
+    (
+      {
+        onChange,
+        value = '',
+        disabled = false,
+        status,
+        statusMessage = '',
+        icon,
+        label,
+        ...restProps
+      },
+      ref,
+    ) => {
+      const [, setIsDirty] = useState<boolean>(false); //input이 한번이라도 변경되면 true
       useEffect(() => {
         setIsDirty(true);
       }, [value]);
       const otherProps = omitStyle(restProps); //input에 직접주입 style 제외
       const handleReset = () => {
-        const syntheticEvent = { target: { value: '' } } as ChangeEvent<HTMLInputElement>;
+        const syntheticEvent = {
+          target: { value: '' },
+        } as ChangeEvent<HTMLInputElement>;
         onChange && onChange(syntheticEvent);
       };
       return (
@@ -41,11 +59,15 @@ export const TextInput = memo(
               ref={ref}
               value={value}
               disabled={disabled}
-              onChange={(e) => onChange && onChange(e)}
+              onChange={e => onChange && onChange(e)}
               {...otherProps}
             />
-            {status === 'reset' && value.length > 0 && <StyledResetIcon icon={faCircleXmark} onClick={handleReset} />}
-            {status === 'error' && <StyledErrorIcon icon={faCircleExclamation} />}
+            {status === 'reset' && value.length > 0 && (
+              <StyledResetIcon icon={faCircleXmark} onClick={handleReset} />
+            )}
+            {status === 'error' && (
+              <StyledErrorIcon icon={faCircleExclamation} />
+            )}
             {status === 'success' && <StyledSuccessIcon icon={faCircleCheck} />}
             <StyledLabel>{label}</StyledLabel>
           </StyledInputBox>
