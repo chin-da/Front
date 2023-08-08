@@ -6,6 +6,8 @@ import {
 //   '0%': { opacity: 0 },
 //   '100%': { opacity: 1 },
 // });
+import { Card } from '@/components/common/Card';
+
 export const OverlayEffectWrapper = styled('div', {});
 export const StyledOverlay = styled('div', {
   zIndex: 1,
@@ -44,4 +46,25 @@ export const StyledOverlay = styled('div', {
       target: { top: 0, left: 0 },
     },
   },
+});
+
+export const StyledCard = styled(Card, {
+  background: '#efefef',
+  textAlign: 'center',
+});
+
+export const StyledRowBox = styled('div', {
+  overflowX: 'hidden',
+  height: '100%',
+  width: '100%',
+  padding: '24px',
+});
+export const StyledImg = styled('img', {
+  width: '100%',
+  objectFit: 'cover',
+  objectPosition: 'center',
+  aspectRatio: '16/9',
+  gridArea: '1/1',
+  display: 'block',
+  height: 'auto',
 });
