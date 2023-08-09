@@ -10,7 +10,8 @@
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "vitest"
+    "test": "vitest",
+    "test:ui": "vitest --ui"
   },
   "lint-staged": {
     "**/*.{js, jsx, ts, tsx}": [
@@ -23,6 +24,7 @@
     "@types/node": "20.4.4",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
+    "@vitest/ui": "^0.34.1",
     "eslint": "8.45.0",
     "next": "13.4.12",
     "react": "18.2.0",
