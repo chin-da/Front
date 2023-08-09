@@ -37,6 +37,7 @@ module.exports = {
         'STYLE',
         'INIT',
         'ADD',
+        'TEST',
       ],
     ],
     'type-case': [2, 'always', 'upper-case'],
