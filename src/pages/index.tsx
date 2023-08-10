@@ -15,16 +15,16 @@ export default function Home() {
         <section>
           <h1>Large Size</h1>
           <div>
-            <Button>Primay Button</Button>
-            <Button color="secondary">Secondary Button</Button>
+            <Button>Large Primary Button</Button>
+            <Button color="secondary">Large Secondary Button</Button>
           </div>
         </section>
         <section>
           <h1>Small Size</h1>
           <div>
-            <Button size="small">Primay Button</Button>
+            <Button size="small">Small Primary Button</Button>
             <Button color="secondary" size="small">
-              Secondary Button
+              Small Secondary Button
             </Button>
           </div>
         </section>
