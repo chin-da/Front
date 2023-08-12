@@ -22,11 +22,13 @@
   "dependencies": {
     "@stitches/react": "^1.2.8",
     "@types/node": "20.4.4",
+    "@types/qrcode": "^1.5.1",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
     "@vitest/ui": "^0.34.1",
     "eslint": "8.45.0",
     "next": "13.4.12",
+    "qrcode": "^1.5.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.1.6"
