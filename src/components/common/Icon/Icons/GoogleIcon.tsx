@@ -1,6 +1,6 @@
 import { SVGProps } from 'react';
 
-const Google = (props: SVGProps<SVGSVGElement>) => {
+const GoogleIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       viewBox="0 0 21 21"
@@ -30,4 +30,4 @@ const Google = (props: SVGProps<SVGSVGElement>) => {
   );
 };
 
-export default Google;
+export default GoogleIcon;

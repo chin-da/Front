@@ -1,9 +1,9 @@
-import Google from './Google';
-import Kakao from './Kakao';
+import GoogleIcon from './GoogleIcon';
+import KakaoIcon from './KakaoIcon';
 
 const iconName = {
-  kakao: Kakao,
-  google: Google,
+  kakao: KakaoIcon,
+  google: GoogleIcon,
 };
 
 export type IconNames = keyof typeof iconName;

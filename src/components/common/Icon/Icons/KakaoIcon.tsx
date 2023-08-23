@@ -1,6 +1,6 @@
-import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
+function KakaoIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={22}
@@ -20,4 +20,4 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export default SvgComponent;
+export default KakaoIcon;
