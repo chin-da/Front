@@ -1,10 +1,10 @@
 import Icons from './Icons';
 import { IconProps } from './type';
 
-const Icon = ({ iconName }: IconProps) => {
+const Icon = ({ iconName, ...props }: IconProps) => {
   const IconComponent = Icons[iconName];
 
-  return <IconComponent />;
+  return <IconComponent {...props} />;
 };
 
 export default Icon;

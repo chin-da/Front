@@ -1,13 +1,17 @@
 import { SVGProps } from 'react';
 
-const GoogleIcon = (props: SVGProps<SVGSVGElement>) => {
+const GoogleIcon = ({
+  width = 24,
+  height = 24,
+  ...props
+}: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       viewBox="0 0 21 21"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
-      width="24"
-      height="24"
+      width={width}
+      height={height}
       {...props}
     >
       <path
