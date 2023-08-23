@@ -1,15 +1,10 @@
 import Icons from './Icons';
 import { IconProps } from './type';
-import * as S from './style';
 
-const Icon = ({ iconName, hasCursor = 'true' }: IconProps) => {
+const Icon = ({ iconName }: IconProps) => {
   const IconComponent = Icons[iconName];
 
-  return (
-    <S.Icon hasCursor={hasCursor}>
-      <IconComponent />
-    </S.Icon>
-  );
+  return <IconComponent />;
 };
 
 export default Icon;
