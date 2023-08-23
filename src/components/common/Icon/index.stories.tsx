@@ -9,14 +9,16 @@ const meta: Meta<typeof Icon> = {
   argTypes: {
     iconName: {
       options: Object.keys(iconName),
+      control: { type: 'select' },
     },
   },
 };
 
 export default meta;
+
 type Story = StoryObj<typeof Icon>;
 
-export const IconComponent: Story = {
+export const Default: Story = {
   args: {
     iconName: 'kakao',
   },
