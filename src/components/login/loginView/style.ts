@@ -57,7 +57,7 @@ export const SocialLoginWrapper = styled('div', {
 export const InfoWrapper = styled('div', {
   display: 'flex',
   alignItems: 'center',
-  gap: '2rem',
+  gap: '55px',
 });
 
 export const Info = styled('span', {
@@ -74,9 +74,9 @@ export const Info = styled('span', {
   '&:not(:last-of-type)::after': {
     content: '',
     position: 'absolute',
-    right: '-1rem',
+    right: -29,
 
-    width: 1.5,
+    width: 1,
     height: '50%',
 
     backgroundColor: '#ECECEC',
