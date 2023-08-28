@@ -3,7 +3,7 @@ import OauthLink from '@/components/common/OauthLink';
 
 import * as S from './style';
 
-export default function Login() {
+export default function LoginView() {
   return (
     <S.Layout>
       <S.Title>로그인 후 서비스를 이용해보세요</S.Title>
