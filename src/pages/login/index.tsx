@@ -1,4 +1,4 @@
-import LoginView from '@/components/login/loginView';
+import LoginView from '@/components/login/LoginView';
 
 export default function Login() {
   return <LoginView />;
