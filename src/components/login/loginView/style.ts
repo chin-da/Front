@@ -84,14 +84,3 @@ export const Info = styled('span', {
     transform: 'translateY(50%)',
   },
 });
-
-export const VerticalBar = styled('div', {
-  display: 'inline-block',
-
-  width: '1px',
-  height: '12px',
-
-  margin: '3px 10px 0 10px',
-
-  backgroundColor: '#ECECEC',
-});
