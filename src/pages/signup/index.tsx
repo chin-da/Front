@@ -1,3 +1,5 @@
+import SignupView from '@/components/signup/SignupView';
+
 export default function Signup() {
-  return <div>signup 입니다</div>;
+  return <SignupView />;
 }
